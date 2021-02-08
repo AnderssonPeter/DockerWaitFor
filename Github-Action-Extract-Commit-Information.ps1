@@ -3,9 +3,6 @@ param([string] $EventName, [string]$Type, [string]$Created, [bool]$Debug = $fals
 if (!$EventName) {
     throw "Must provide EventName parameter"
 }
-if (!$Type) {
-    throw "Must provide Type parameter"
-}
 if (!$Created) {
     throw "Must provide Created parameter"
 }
