@@ -36,6 +36,9 @@ if (![DateTime]::TryParseExact($Created, 'yyyy-MM-ddTHH:mm:ssZ', [System.Globali
 if ($GithubRef.StartsWith("refs/tags/$Type/v")) {
     $Version = $GithubRef.Substring("refs/tags/$Type/v".Length)
 }
+else if ($GithubRef.StartsWith("refs/tags/v") -and !$Type) {
+    $Version = $GithubRef.Substring("refs/tags/v".Length)
+}
 else {
     throw "Failed to extract version, expected GithubRef('$GithubRef') to match 'refs/tags/$Type/v' but it didn't"
 }
