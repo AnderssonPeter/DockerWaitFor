@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "DockerWaitFor": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "environmentVariables": {
+        "SCAN_INTERVAL": "1"
+      }
+    }
+  }
+}
