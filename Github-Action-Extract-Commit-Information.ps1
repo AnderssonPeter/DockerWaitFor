@@ -44,7 +44,7 @@ if ($Version -notmatch '^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}$') {
     throw "Version must have format #.#.#.#"
 }
 
-$TAGS="ghcr.io/${GithubRepository}:${VERSION}"
+$TAGS="peterandersson/docker-wait-for:${VERSION}"
 
 Write-Host ::set-output name=version::$Version
 Write-Host ::set-output name=type::$Type
